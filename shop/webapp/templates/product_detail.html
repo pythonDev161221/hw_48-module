@@ -8,11 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-<h2>All products</h2>
-{% for product in products %}
-<p>
-    <a href="{% url "detail_view" product.id %}">{{ product.product }} ({{ product.category }}) {{ product.balance }} | {{ product.price }}</a>
-</p>
-{% endfor %}
+<h2>Product detail</h2>
+<p>Название: {{ product.product }}</p>
+<p>Категория: {{ product.category.1 }}</p>
+<p>Описание: {{ product.description }}</p>
+<p>Остаток: {{ product.balance }}</p>
+<p>Цена: {{ product.price }}</p>
+
 </body>
 </html>
