@@ -13,6 +13,7 @@
 </p>
         <p>
             <a href="{% url "update_view" product.id %}">Update</a>
+            <a href="{% url "delete_view" product.pk %}">Delete</a>
         </p>
     {% endif %}
 {% endfor %}

@@ -66,5 +66,12 @@ def update_view(request, id):
             return redirect('detail_view', id=product.id)
         return render(request, "update_product.html", {'product': product, 'form': form})
 
+
 def delete_view(request, pk):
-    pass
+    product = Product.objects.get(pk=pk)
+    if request.method == "GET":
+        return render(request, "delete_product.html", {"product": product})
+    else:
+        print(product)
+        product.delete()
+        return redirect("index")
