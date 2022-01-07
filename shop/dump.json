@@ -1,0 +1,46 @@
+[
+{
+    "model": "webapp.product",
+    "pk": 1,
+    "fields": {
+        "product": "Shirt",
+        "description": "sdtgh3333",
+        "category": "other",
+        "balance": 3,
+        "price": "12.00"
+    }
+},
+{
+    "model": "webapp.product",
+    "pk": 2,
+    "fields": {
+        "product": "boots",
+        "description": null,
+        "category": "other",
+        "balance": 2,
+        "price": "155.00"
+    }
+},
+{
+    "model": "webapp.product",
+    "pk": 3,
+    "fields": {
+        "product": "sweeter",
+        "description": null,
+        "category": "clothes",
+        "balance": 123,
+        "price": "125.00"
+    }
+},
+{
+    "model": "webapp.product",
+    "pk": 6,
+    "fields": {
+        "product": "dzsgf",
+        "description": "sdfgr",
+        "category": "clothes",
+        "balance": 12,
+        "price": "123.00"
+    }
+}
+]
