@@ -4,9 +4,9 @@
     "pk": 1,
     "fields": {
         "product": "Shirt",
-        "description": "sdtgh3333",
+        "description": "sdtgh3333sdg r gdgt",
         "category": "other",
-        "balance": 3,
+        "balance": 5,
         "price": "12.00"
     }
 },
@@ -34,13 +34,35 @@
 },
 {
     "model": "webapp.product",
-    "pk": 6,
+    "pk": 7,
     "fields": {
-        "product": "dzsgf",
+        "product": "dsgsfgh",
+        "description": "sdfbhsgf sg",
+        "category": "other",
+        "balance": 23,
+        "price": "34.00"
+    }
+},
+{
+    "model": "webapp.product",
+    "pk": 8,
+    "fields": {
+        "product": "regtrg",
         "description": "sdfgr",
-        "category": "clothes",
-        "balance": 12,
-        "price": "123.00"
+        "category": "other",
+        "balance": 32,
+        "price": "23.00"
+    }
+},
+{
+    "model": "webapp.product",
+    "pk": 9,
+    "fields": {
+        "product": "Zero",
+        "description": "asdf",
+        "category": "other",
+        "balance": 0,
+        "price": "12.00"
     }
 }
 ]
