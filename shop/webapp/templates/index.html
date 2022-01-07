@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-Hello world
+<h2>All products</h2>
+{% for product in products %}
+<p>
+    {{ product.product }} ({{ product.category }}) {{ product.balance }} | {{ product.price }}
+</p>
+{% endfor %}
 </body>
 </html>
