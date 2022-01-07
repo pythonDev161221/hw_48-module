@@ -6,8 +6,14 @@
 {% block content %}
 <h2>All products</h2>
 {% for product in products %}
+    {% if product.balance >= 1 %}
 <p>
-    <a href="{% url "detail_view" product.id %}">{{ product.product }} ({{ product.category }}) {{ product.balance }} | {{ product.price }}</a>
+    <a href="{% url "detail_view" product.id %}">{{ product.product }}
+        ({{ product.category }}) | {{ product.price }}</a>
 </p>
+        <p>
+            <a href="{% url "update_view" product.id %}">Update</a>
+        </p>
+    {% endif %}
 {% endfor %}
 {% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Create page{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+create product page
+    <form action="" method="post">
+    {% include "partial/form.html" with button_text="create" %}
+    </form>
+
+
+
+{#<form action="" method="post">#}
+{#    {% csrf_token %}#}
+{#    <label for="product">Product name: </label>#}
+{#    <input id="product" type="text" name="product" value="">#}
+{#<p>#}
+{#    <label for="category">category: </label>#}
+{#    <select name="category" id="category">#}
+{#        {% for item in select %}#}
+{#        <option value="{{ item.0 }}">{{ item.1 }}</option>#}
+{#        {% endfor %}#}
+{#    </select>#}
+{#</p>#}
+{#<p>#}
+{#    <label for="description">description: </label>#}
+{#    <textarea name="description" id="description" cols="20" rows="4"></textarea>#}
+{#</p>#}
+{#<p>#}
+{#    <label for="balance">balance: </label>#}
+{#    <input name="balance" type="number" value="">#}
+{#</p>#}
+{#<p>#}
+{#    <label for="price">price: </label>#}
+{#    <input name="price" type="number" value="">#}
+{#</p>#}
+{##}
+{#    <input type="submit" value="OK">#}
+{#</form>#}
+{% endblock %}
