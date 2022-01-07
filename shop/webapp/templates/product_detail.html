@@ -2,6 +2,11 @@
 
 {% block title %}Product page{% endblock %}
 
+{% block nav %}
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{% url "update_view" product.id %}">Update</a>
+    </li>
+{% endblock %}
 
 {% block content %}
 <h2>Product detail</h2>

@@ -40,6 +40,8 @@ def create_view(request):
         #           category=category, description=description, balance=balance, price=price)
         # print(products)
         # return render(request, "product_detail.html", context={'product': products})
+
+
 def update_view(request, id):
     # product = Product.objects.get(pk=pk)
     product = get_object_or_404(Product, id=id)
@@ -63,3 +65,6 @@ def update_view(request, id):
             product.save()
             return redirect('detail_view', id=product.id)
         return render(request, "update_product.html", {'product': product, 'form': form})
+
+def delete_view(request, pk):
+    pass
