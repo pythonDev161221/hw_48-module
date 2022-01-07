@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-create product page
+    <h3>New product</h3>
     <form action="{% url "create_view" %}" method="post">
     {% include "partial/form.html" with button_text="create" %}
     </form>
