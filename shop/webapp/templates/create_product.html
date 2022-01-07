@@ -7,7 +7,7 @@
 
 {% block content %}
 create product page
-    <form action="" method="post">
+    <form action="{% url "create_view" %}" method="post">
     {% include "partial/form.html" with button_text="create" %}
     </form>
 

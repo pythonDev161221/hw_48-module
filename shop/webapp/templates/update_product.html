@@ -7,7 +7,7 @@
 
 {% block content %}
 create product page
-    <form action="" method="post">
+    <form action="{% url "update_view" product.id %}" method="post">
     {% include "partial/form.html" with button_text="update" %}
     </form>
 {% endblock %}
