@@ -1,18 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Main page {% endblock %}
+
+
+
+{% block content %}
 <h2>All products</h2>
 {% for product in products %}
 <p>
     <a href="{% url "detail_view" product.id %}">{{ product.product }} ({{ product.category }}) {{ product.balance }} | {{ product.price }}</a>
 </p>
 {% endfor %}
-</body>
-</html>
+{% endblock %}
