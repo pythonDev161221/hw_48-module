@@ -7,7 +7,7 @@ from .models import Product, CHOOSE_CATEGORY
 
 
 def index_view(request):
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('product', 'category')
     products = {'products': products}
     return render(request, "index.html", context=products)
 
