@@ -12,6 +12,15 @@ def index_view(request):
     return render(request, "index.html", context=products)
 
 
+def search_view(request):
+    search = request.GET.get('search')
+    if not search:
+        return redirect("index")
+    products = Product.objects.filter(product=search).order_by('product', 'category')
+    products = {'products': products}
+    return render(request, "index.html", context=products)
+
+
 def detail_view(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'product_detail.html', {'product': product})
@@ -25,7 +34,6 @@ def create_view(request):
     else:
         form = ProductForm(data=request.POST)
         if form.is_valid():
-
             product = request.POST.get('product')
             category = request.POST.get('category')
             description = request.POST.get('description')
