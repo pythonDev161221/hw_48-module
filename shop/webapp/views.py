@@ -22,7 +22,6 @@ def search_view(request):
     return render(request, "index.html", context=products)
 
 
-
 def detail_view(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'product_detail.html', {'product': product})

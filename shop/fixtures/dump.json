@@ -64,5 +64,27 @@
         "balance": 0,
         "price": "12.00"
     }
+},
+{
+    "model": "webapp.product",
+    "pk": 10,
+    "fields": {
+        "product": "serg",
+        "description": "dsfgr",
+        "category": "other",
+        "balance": 23,
+        "price": "234.00"
+    }
+},
+{
+    "model": "webapp.product",
+    "pk": 11,
+    "fields": {
+        "product": "srt",
+        "description": "",
+        "category": "equipment",
+        "balance": 122,
+        "price": "12.00"
+    }
 }
 ]
