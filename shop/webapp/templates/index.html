@@ -3,7 +3,12 @@
 
 {% block search %}
     <form class="d-flex" action="{% url "search_view" %}" method="get">
-        <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+    {% csrf_token %}
+
+        {% for field in form %}
+            <input class="form-control me-2" type="search" name="{{ field.name }}"
+                    placeholder="Search" aria-label="Search">
+        {% endfor %}
         <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
 {% endblock %}

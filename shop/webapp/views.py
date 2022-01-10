@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .forms import ProductForm
+from .forms import ProductForm, SearchForm
 from .models import Product, CHOOSE_CATEGORY
 
 # Create your views here.
 
 
 def index_view(request):
+    form = SearchForm()
     products = Product.objects.all().order_by('product', 'category')
-    products = {'products': products}
+    products = {'products': products, 'form': form}
     return render(request, "index.html", context=products)
 
 
@@ -19,6 +20,7 @@ def search_view(request):
     products = Product.objects.filter(product=search).order_by('product', 'category')
     products = {'products': products}
     return render(request, "index.html", context=products)
+
 
 
 def detail_view(request, id):

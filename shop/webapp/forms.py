@@ -11,3 +11,7 @@ class ProductForm(forms.Form):
                                   widget=forms.Textarea)
     balance = forms.IntegerField(required=True, label='остаток', min_value=0)
     price = forms.DecimalField(required=True, label='цена', max_digits=7, decimal_places=2, min_value=0)
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=200, required=False, label="поиск")
